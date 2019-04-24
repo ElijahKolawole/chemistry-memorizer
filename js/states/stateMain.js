@@ -53,12 +53,9 @@ var StateMain = {
         this.resizeObj(this.card,.7);
 
 
-
-
-
-
         this.pickRandCard();
         this.delaySlideOut();
+        this.printGameTitle();
 
         this.rightCard=this.currentCard;
 
@@ -141,6 +138,15 @@ var StateMain = {
         else{
             game.state.start("StateOver");
         }
+    },
+    printGameTitle: function(){
+      this.gameText=game.add.text(game.world.centerX,0,"CHEMISTRY MEMORIZER");
+        this.gameText.anchor.set(0.5,0.5);
+        this.gameText.fontSize=40;
+        this.gameText.fill="#FFFFFF";
+        this.gameText.y=game.world.height-50;
+
+
     }
 
 }
