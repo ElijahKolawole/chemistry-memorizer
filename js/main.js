@@ -11,7 +11,7 @@ var isMobile
 
 //portrait or landscape
 
-var useLandscape = false;
+var useLandscape = true;
 
 
 window.onload = function () {
@@ -29,7 +29,9 @@ if (isMobile>-1)
     if (isMobile==false) {
         //desktop laptop
         if (useLandscape == true) {
-            game = new Phaser.Game(640, 480, Phaser.AUTO, "ph_game");
+
+            game = new Phaser.Game(640, 540, Phaser.AUTO, "ph_game");
+
         } else {
 
             game = new Phaser.Game(480, 640, Phaser.AUTO, "ph_game");

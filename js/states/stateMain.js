@@ -4,18 +4,20 @@ var StateMain = {
     },
     create: function(){
         //reset the score
+
         score =0;
 
         this.secs=30;
-        this.scoreText=game.add.text(game.world.centerX,0,"0");
-        this.scoreText.anchor.set(0.5,0.5);
-        this.scoreText.fontSize=120;
+        this.scoreText=game.add.text((game.world.width-150),0,"Score: 0");
+        console.log('game.world.x:'+ (game.world.width-100));
+        //this.scoreText.anchor.set(0.5,0.5);
+        this.scoreText.fontSize=35;
         this.scoreText.fill="#FFFFFF";
-        this.scoreText.y=(this.scoreText.height/2)+15;
+        this.scoreText.y=(this.scoreText.height/2);
 
-        this.timeText=game.add.text(game.world.centerX,0,"0");
-        this.timeText.anchor.set(0.5,0.5);
-        this.timeText.fontSize=32;
+        this.timeText=game.add.text((game.world.x+10),0,"Timer: 0");
+        //this.timeText.anchor.set(0.5,0.5);
+        this.timeText.fontSize=35;
         this.timeText.fill="#FFFFFF";
         this.timeText.y=this.timeText.height/2;
 
@@ -55,7 +57,7 @@ var StateMain = {
 
         this.pickRandCard();
         this.delaySlideOut();
-        this.printGameTitle();
+        //this.printGameTitle();
 
         this.rightCard=this.currentCard;
 
@@ -65,7 +67,7 @@ var StateMain = {
     },
     tick: function(){
         this.secs--;
-        this.timeText.text="Time-Left:"+this.secs+"s";
+        this.timeText.text="Timer: "+this.secs+"s";
 
         if (this.secs==0) {
             game.state.start("StateOver");
@@ -119,7 +121,7 @@ var StateMain = {
     },
     upScore: function(){
         score++;
-        this.scoreText.text=score;
+        this.scoreText.text="Score: "+score;
         this.rightCard=this.currentCard;
         this.pickRandCard();
     },
@@ -144,7 +146,7 @@ var StateMain = {
         this.gameText.anchor.set(0.5,0.5);
         this.gameText.fontSize=40;
         this.gameText.fill="#FFFFFF";
-        this.gameText.y=game.world.height-50;
+        this.gameText.y=game.world.height-10;
 
 
     }
