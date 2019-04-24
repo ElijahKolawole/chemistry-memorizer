@@ -37,7 +37,7 @@ var StateMain = {
         this.resizeObj(this.buttonGroup,.6);
         this.buttonGroup.x=game.world.centerX-this.buttonGroup.width/2;
         this.resizeObj(this.card,.5);
-        this.buttonGroup.visible=false;
+        this.buttonGroup.visible=true;
         this.pickRandCard();
         this.delaySlideOut();
         this.rightCard=this.currentCard;
