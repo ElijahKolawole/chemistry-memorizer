@@ -16,8 +16,8 @@ var StateLoad = {
         game.load.spritesheet("buttons", "images/ui/buttons-red.png", 265, 75);
         game.load.spritesheet("soundButtons", "images/ui/soundButtons-blue.png", 44, 44, 4);
         game.load.audio("backgroundMusic", "audio/background/piano.mp3");
-        game.load.spritesheet("cards", "images/main/el_spritesheet.png", 250, 250, 10); //element 
-        game.load.spritesheet("gameButtons", "images/main/rw_spritesheet.png", 300, 300, 10); //element cards
+        game.load.spritesheet("cards", "images/main/card_spritesheet.png", 225,225); //element 
+        game.load.spritesheet("gameButtons", "images/main/rw_spritesheet.png",300,300,2); //element cards
 
 
         //game.load.audio("elephant", "audio/sfx/elephant.mp3");
